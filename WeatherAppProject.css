@@ -1,0 +1,229 @@
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+    font-family: monospace;
+    color: rgba(240, 248, 255, 0.749);
+
+}
+body{
+  
+    background-color: #17153B;
+    background-image: url("./images/bgImage.png");
+    background-size: cover;
+    
+    /* background-color: #045381;
+background-image: linear-gradient(160deg, #0066a1 0%, #347a72 100%); */
+
+    /* background-attachment: fixed;  */
+}
+
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+#main_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 480px;
+    margin: 1rem auto;
+    border-radius: 20px;
+    min-height: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+.tab_container{
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin: 0 auto;
+}
+.tab {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-radius 0.3s ease; /* Smooth transition for background and border-radius */
+
+    background-color: rgba(244, 241, 241, 0.089);
+    border-radius: 8px;
+    box-shadow: rgba(27, 11, 11, 0.002) 0px 4px 12px;
+}
+
+.tab.current_tab {
+    background-color: rgba(20, 1, 1, 0.53);
+    border-radius: 8px;
+    box-shadow: rgba(144, 138, 138, 0.32) 0px 4px 12px;
+}
+.sub_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -----Grant Location styling------ */
+.grant_location_container{
+    display: none;
+    margin-block: 2rem;
+    gap: 1.2rem;
+}
+.btn {
+    font-size: 0.95rem;
+    padding: 0.35rem 1rem;
+    border-radius: 0.45rem;
+    background-color: #19647e;
+    border: 2px rgba(255, 255, 255, 0.126) solid;
+    color: white;
+    transition: transform 0.2s ease;
+}
+.btn:hover {
+    cursor: pointer;
+    border: 2.5px rgba(255, 255, 255, 0.126) solid;
+}
+.btn:active {
+    transform: scale(0.95);
+}
+/* ////////////////////// */
+.grant_location_container.active{
+    display: flex;
+}
+/* -----Grant Location styling------ */
+
+/* -----Search Form styling------ */
+.form_container {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    width: 600px;
+    margin: 2.5rem auto;
+    position: relative; /* Required for positioning the button inside the input */
+}
+
+.form_container input {
+    padding: 0.8rem 1rem;
+    border-radius: 1rem 42px 42px 1rem; 
+    background-color: #718cc0;
+    color: white;
+    border: none;
+    min-width: 520px;
+    text-transform: uppercase;
+}
+
+.form_container input::placeholder {
+    color: white;
+}
+
+.search_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #5887e0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0; /* Align to the right edge of the input */
+    top: 50%; /* Center vertically */
+    margin-left: -2.6rem;
+    transition: transform 0.2s ease;
+}
+.search_button:active {
+    transform: scale(0.90);
+    outline: 1.2px solid rgba(255, 255, 255, 0.584);
+}
+
+.form_container input:focus{
+    outline: 2.5px solid rgba(255, 255, 255, 0.584);
+}
+
+.form_container.active{
+    display: flex;
+}
+/* -----Search Form styling------ */
+
+/* -----user_info_container styling------ */
+.user_info_container{
+    display: none;
+    flex-direction: column;
+    min-width: 540px;
+    margin: 4rem auto;
+    gap: 1rem;
+}
+.city_container{
+    font-size: 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+#country_icon_img{
+    width: 2rem;
+    height: 1.5rem;
+}
+.user_info_container p[data-weatherDesc]{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.user_info_container img[data-weatherIcon]{
+    height: 4rem;
+    background-color: rgba(255, 255, 255, 0.477);
+    border-radius: 50%;
+}
+.user_info_container p[data-temp]{
+    font-size: 3.2rem;
+}
+
+.user_info_container.active{
+    display: flex;
+}
+
+/* -----user_info_container styling------ */
+
+
+/* -----parameter_container styling------ */
+.parameter_container{
+    display: flex;
+    gap: 1.5rem;
+}
+.parameter{
+    min-height: 8rem;
+    min-width: 12rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    border-radius: 1rem;
+    padding: 2rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.221);
+    
+
+
+}
+.parameter img{
+    height: 4.5rem;
+    width: 5rem;
+}
+.parameter p:first-of-type{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.parameter p:nth-of-type(2){
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+}
+
+/* -----parameter_container styling------ */
+
+
+.loading_container{
+    display: none;
+}
+.loading_container.active{
+    display:flex;
+}

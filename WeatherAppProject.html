@@ -1,0 +1,106 @@
+<!-- March,2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Project</title>
+    <link rel="stylesheet" href="WeatherAppProject.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Main Heading -->
+        <h1 id="main_heading">Weather App</h1>
+
+        <!-- tab-container -->
+         <div class="tab_container">
+            <p class="tab" data-yourWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+         </div>
+
+         <!-- Weather Container div-start-->
+         <div class="weather_container">
+
+            <!-- grant location window(window-1) -->
+             <div class="sub_container grant_location_container">
+                <!-- location image -->
+                <img src="./images/location.png" alt="nf" width="80" height="80" loading="lazy">
+                <!-- other details -->
+                <p>Grant Location Access</p>
+                <p>Allow Access to get weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+             </div>
+
+             <!-- Search Weather Form Container(window-2) -->
+              <form class="sub_container form_container" data-searchForm>
+                <input placeholder="Search for City...." data-searchInput >
+
+                <button class="search_button" type="submit">
+                    <img src="./images/search.png" alt="nf" width="20" height="20" loading="lazy">
+                </button>
+             </form>
+
+              <!--- loading screen container -->
+              <div class="sub_container loading_container">
+                <img src="./images/loading.gif" width="150" height="150">
+                <p>Loading</p>
+              </div>
+
+              <!-- Your Weather window(window-3) -->
+               <div class="sub_container user_info_container">
+
+                <!-- city details -->
+                <div class="city_container">
+                    <p data-cityName></p>
+                    <img id="country_icon_img" data-countryIcon>
+                </div>
+                <!-- below details of  it -->
+                 <!-- weather descriptuion-->
+                <p data-weatherDesc></p>
+                <!--weather Icon-->
+                <img data-weatherIcon>
+                <!--temperature-->
+                <p data-temp></p>
+
+                <!--3 cards - parameters-->
+                <div class="parameter_container">
+
+                    <!--card 1-->
+                    <div class="parameter">
+                        <img src="./images/wind.png" >
+                        <p>windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+    
+                    <!--card 2-->
+                    <div class="parameter">
+                        <img src="./images/humidity.png" >
+                        <p>humidity</p>
+                        <p data-humidity></p>
+                    </div>
+    
+                    <!--card 3-->
+                    <div class="parameter">
+                        <img src="./images/cloud.png" >
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+    
+                </div>
+
+                </div>
+
+
+         </div>
+         <!-- Weather Container div-ends-->
+
+    </div>
+
+
+
+    <script src="WeatherAppProject.js"></script>
+</body>
+</html>
+
+
